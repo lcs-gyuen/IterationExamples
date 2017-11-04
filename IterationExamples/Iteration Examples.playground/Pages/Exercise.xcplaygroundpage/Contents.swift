@@ -28,10 +28,13 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Below this line, try combining a loop and a single statement to generate the goal
-
+// Line width
+for y in stride(from: 0, through: 600, by: 20) {
+    canvas.drawLine(fromX: y, fromY: 0, toX: 300, toY: y)
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 PlaygroundPage.current.liveView = canvas.imageView
+
